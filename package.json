@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "bin": {
-    "scaffold": "bin/index.js"
+    "scaffold-test": "bin/index.js"
   }
 }
