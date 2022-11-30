@@ -1,5 +1,5 @@
 {
-  "name": "scaffold-test",
+  "name": "@onomicon/scaffold-test",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -11,5 +11,8 @@
   "description": "",
   "bin": {
     "scaffold-test": "bin/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
