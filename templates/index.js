@@ -10,3 +10,8 @@ export const indexHtml = `<!DOCTYPE html>
     <h1>Hello World</h1>
   </body>
 </html>`;
+
+export const styleSheet = `body {
+  margin: 0;
+}
+`;

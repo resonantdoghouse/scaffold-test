@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import fs from 'fs';
-import { indexHtml } from '../templates/index.js';
+import { indexHtml, styleSheet } from '../templates/index.js';
 
 console.log('scaffold starting');
 
@@ -20,8 +20,15 @@ const createFile = (filePath, fileContent) => {
 };
 
 const init = () => {
-  createDir('/test');
-  createFile('test/index.html', indexHtml);
+  let projectFolderName = process.argv[2];
+  if (!projectFolderName) {
+    projectFolderName = 'project';
+  }
+
+  createDir(`/${projectFolderName}`);
+  createFile(`${projectFolderName}/index.html`, indexHtml);
+  createDir(`/${projectFolderName}/css`);
+  createFile(`${projectFolderName}/css/style.css`, styleSheet);
 };
 
 init();
