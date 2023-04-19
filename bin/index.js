@@ -2,7 +2,7 @@
 import fs from 'fs';
 import { indexHtml, styleSheet } from '../templates/index.js';
 
-console.log('scaffold starting');
+console.log('scaffold starting 🏁');
 
 const createDir = (dirPath) => {
   const test = fs.mkdirSync(process.cwd() + dirPath, { recursive: true });
@@ -29,6 +29,8 @@ const init = () => {
   createFile(`${projectFolderName}/index.html`, indexHtml);
   createDir(`/${projectFolderName}/css`);
   createFile(`${projectFolderName}/css/style.css`, styleSheet);
+
+  console.log('scaffold completed ✅');
 };
 
 init();
